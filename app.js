@@ -4,8 +4,6 @@ const loadBtn = document.getElementById('load-data-btn');
 
 async function fetchData() {
   try {
-    dataContainer.innerHTML = '<span class="loading">Loading…</span>';
-
     const response = await fetch(API_ENDPOINT);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
